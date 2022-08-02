@@ -1,4 +1,8 @@
-## Testing
+## Message Delivery System
+
+This is a Go implementation for a client-server message system using bidirectional streaming RPCs
+
+## Run Testing
 
 #### Start the server
 `cd` to server directory, run `go run ./server.go`
@@ -34,4 +38,6 @@ Client id: 1659403041, receives following:
 2022/08/01 21:19:12 received: Message:"test-message"
 ```
 
-Send relay message to multiple client, use comma saperate user id, e.g. `go run ./client.go relay 1659403041,1659403042 test-message`
+Send relay message to multiple client, use comma saperate user id, e.g. 
+
+`go run ./client.go relay 1659403041,1659403042 test-message`
