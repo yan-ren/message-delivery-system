@@ -1,0 +1,20 @@
+syntax = 'proto3';
+
+package message;
+
+option go_package = "proto/pb";
+
+message Request {
+    repeated uint64 Users = 1;
+    string Message = 2;
+    string Type = 3;
+}
+
+message Response {
+    repeated uint64 Users = 1;
+    string Message = 2;
+}
+
+service DeliveryService {
+    rpc Delivery (stream Request) returns (stream Response);
+}
